@@ -28,8 +28,8 @@ public class AssignmentService {
 		
 		product.setCreatedAt(LocalDateTime.now());
 
-		productRepository.save(product);
-		return productRepository.findById(product.getId()).get();
+		return productRepository.save(product);
+		
 		
 	}
 
