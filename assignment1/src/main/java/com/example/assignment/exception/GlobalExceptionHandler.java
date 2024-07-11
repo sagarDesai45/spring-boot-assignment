@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
 	
 	
-	 	@ExceptionHandler(Exception.class)
+	    @ExceptionHandler(Exception.class)
 	    public ResponseEntity<String> handleGenericException(Exception ex) {
 	        
 	        return new ResponseEntity<>("Internal Server Error: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
