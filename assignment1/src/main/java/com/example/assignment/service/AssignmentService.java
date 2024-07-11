@@ -27,11 +27,7 @@ public class AssignmentService {
 	public Product insertProduct(Product product) {
 		
 		product.setCreatedAt(LocalDateTime.now());
-//		 if (product.getTags() != null) {
-//	            for (Tags tag : product.getTags()) {
-//	                tag.setProduct(product);
-//	            }
-//	        }
+
 		productRepository.save(product);
 		return productRepository.findById(product.getId()).get();
 		
